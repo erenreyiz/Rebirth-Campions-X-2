@@ -73,20 +73,21 @@ chat.ChildAdded:Connect(function(instance)
 
                 local Data = {
                     ["content"] = _G.HatchPing,
-                    ["author"]{
-                        ["author"] = username,
-                        ["Url"] = "https://www.roblox.com/users/".. userid .."/profile",
-                        ["Icon"] = icon
                     }
                     ["embeds"] = {{
+                    ["author"]{
+                            ["author"] = username,
+                            ["Url"] = "https://www.roblox.com/users/".. userid .."/profile",
+                            ["Icon"] = icon
+                    ["Body"] = {
                         ["Description"] = HatchText,
                         ["color"] =  os.date(FormatTime(getgenv().TimeFormat), os.time()),
-                        ["Footer"] =
+                    ["Footer"] =
                             ["Text"] = "Rebirth Cahmpions X"
                             {{
                         }
                         }
-                    }}
+                    }}}
                 }
                 local HttpRequest = syn and syn.request or http_request
                 HttpRequest(({Url= Webhook, Body = HttpService:JSONEncode(Data), Method = "POST", Headers = {["content-type"] = "application/json"}})
