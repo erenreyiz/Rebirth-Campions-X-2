@@ -31,14 +31,6 @@ getgenv().TimeFormat = getgenv().TimeFormat or "TIME12"
     local count1 = comma_value(game:GetService("Players")[playerName].Stats.EggsOpened.Value)
     local count2 = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec)
 
-
-local Times = {}
-Times["TIME12"] = "%%I:%%M %%p"
-Times["TIME24"] = "%%H:%%M"
-Times["DATE"] = "%%x"
-Times["TIMEZONE"] = "%%Z"
-Times["TIME"] = "%%X"
-
 function FormatTime(str: string)
     for i,v in pairs(Times) do
         str = str:gsub(i, v)
