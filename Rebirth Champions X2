@@ -3,6 +3,7 @@ local username = game:GetService("Players").LocalPlayer
 local = HatchText
 local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
 local chat = Player.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
+Webhook = _G.Webhook
 
 
 function comma_value(amount)
@@ -66,7 +67,7 @@ chat.ChildAdded:Connect(function(instance)
                     if string.find(instance.TextLabel.Text,"Golden") then
                         HatchText =  username .. " just hatched a **GOLDEN Mythical Crimson Skull**! (**0.006**)"
                     else
-                        HatchText = username .. " just hatched a **Mythical Crimson Skull**! (**0.006**)"
+                        HatchText =  username .. " just hatched a **Mythical Crimson Skull**! (**0.006**)"
                     end
                 end
 
