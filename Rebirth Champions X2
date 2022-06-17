@@ -87,8 +87,11 @@ Chat.ChildAdded:Connect(function(instance)
                 local HttpRequest = http_request
                 if syn then HttpRequest = syn.request else HttpRequest = http_request end
                     HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+                end
             end
         end
     end
+end
+end
 end)
 print('RCX Pet htacher 1.0, Maintained and Updated By Leichtespiele#6050')
