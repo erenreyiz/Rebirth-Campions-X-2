@@ -78,7 +78,7 @@ Chat.ChildAdded:Connect(function(instance)
                 local Data = {
                     ["content"] = SecretPing,
                     ["author"] = {
-                        ["author"] = local username
+                        ["author"] = username
                         ["url"] = "https://www.roblox.com/users/".. userid .."/profile",
                         ["author icon url"] = icon
                     }
