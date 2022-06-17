@@ -87,7 +87,7 @@ chat.ChildAdded:Connect(function(instance)
                     }}
                 }
                 local HttpRequest = syn and syn.request or http_request
-                HttpRequest({Url= _G.Webhook, Body = HttpService:JSONEncode(Data), Method = "POST", Headers = {["content-type"] = "application/json"}})
+                HttpRequest({Url=Webhook, Body = HttpService:JSONEncode(Data), Method = "POST", Headers = {["content-type"] = "application/json"}})
             end
         end
     end
