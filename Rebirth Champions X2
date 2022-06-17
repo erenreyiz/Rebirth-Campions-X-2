@@ -72,7 +72,7 @@ chat.ChildAdded:Connect(function(instance)
                 end
 
                 local Data = {
-                    ["content"] = pingMsg,
+                    ["content"] = _G.HatchPing,
                     ["author"]{
                         ["author"] = username,
                         ["Url"] = "https://www.roblox.com/users/".. userid .."/profile",
