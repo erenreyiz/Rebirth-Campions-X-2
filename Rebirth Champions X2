@@ -1,6 +1,6 @@
 local HttpService = game:GetService("HttpService")
 local username = game:GetService("Players").LocalPlayer
-local = HatchText
+local HatchText
 local icon = "https://www.roblox.com/headshot-thumbnail/image?userId="..userid.."&width=420&height=420&format=png"
 local chat = Player.PlayerGui.Chat.Frame.ChatChannelParentFrame["Frame_MessageLogDisplay"].Scroller
 local Webhook = _G.Webhook
