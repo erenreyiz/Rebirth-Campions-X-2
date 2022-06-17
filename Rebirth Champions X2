@@ -86,11 +86,11 @@ Chat.ChildAdded:Connect(function(instance)
                         ["Description"] = HatchText
                         {
                     ["footer"]
-                            ["text"] = "Eggs Opened: #" .. abb(count1) .. " | "Time: #" .. abb(count2) .. ",
-                        }
-                        }
-                    }}
-                }
+                            ["text"] = "Eggs Opened: #" .. abb(count1) .. "
+                        },
+                    ["timestamp"] = count2
+                    ["color"] = hex
+                    ["fields"] = {}},}}}
                 local HttpRequest = syn and syn.request or http_request
                 HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
             end
