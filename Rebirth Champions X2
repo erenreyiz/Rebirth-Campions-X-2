@@ -89,8 +89,9 @@ chat.ChildAdded:Connect(function(instance)
                     }}
                 }
                 local HttpRequest = syn and syn.request or http_request
-                HttpRequest(({Url= "https://discord.com/api/webhooks/948422812794769460/ez69WpRAhn3qPth6kKOAJ-EcbcrFwvDfMk0Qc3Ab3Rb0Gy4hAHxIe371KtU5SFyQtANO", Body = HttpService:JSONEncode(Data), Method = "POST", Headers = {["content-type"] = "application/json"}})
+                HttpRequest(({Url= Webhook, Body = HttpService:JSONEncode(Data), Method = "POST", Headers = {["content-type"] = "application/json"}})
             end
         end
     end
 end)
+print('Rebirth Champions X Pet Hatcher, Updated by Leichtespiele#6050')
