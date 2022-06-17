@@ -84,8 +84,9 @@ Chat.ChildAdded:Connect(function(instance)
                     ["timestamp"] = count2
                     ["color"] = hex
                     ["fields"] = {}},}}}
-                local HttpRequest = syn and syn.request or http_request
-                HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
+                local HttpRequest = http_request
+                if syn then HttpRequest = syn.request else HttpRequest = http_request end
+                    HttpRequest({Url=Webhook, Body=Info, Method="POST", Headers=Headers})
             end
         end
     end
