@@ -49,7 +49,7 @@ end
 
 Chat.ChildAdded:Connect(function(instance)
     if string.find(instance.TextLabel.Text,"Server") then
-        if string.find(instance.TextLabel.Text,local username) then
+        if string.find(instance.TextLabel.Text,username) then
                 if string.find(instance.TextLabel.Text,"hatched") then
                     if string.find(instance.TextLabel.Text,"a") then
 
