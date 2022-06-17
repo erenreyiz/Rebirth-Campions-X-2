@@ -40,13 +40,6 @@ local function rgbToHex(rgb)
     local count1 = comma_value(game:GetService("Players")[playerName].Stats.EggsOpened.Value)
     local count2 = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec)
 
-function FormatTime(str: string)
-    for i,v in pairs(Times) do
-        str = str:gsub(i, v)
-    end
-    return str
-end
-
 Chat.ChildAdded:Connect(function(instance)
     if string.find(instance.TextLabel.Text,"Server") then
         if string.find(instance.TextLabel.Text,username) then
