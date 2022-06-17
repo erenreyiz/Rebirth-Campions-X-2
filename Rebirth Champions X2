@@ -47,14 +47,11 @@ function FormatTime(str: string)
     return str
 end
 
-chat.ChildAdded:Connect(function(instance)
-    local TextColor3 = instance.TextLabel.TextColor3
-    wait(.1)
-
-    if TextColor3 == Color3.fromRGB(255, 255, 255) then else
-        for _, playerName in pairs(playerNames) do
-            if string.find(instance.TextLabel.Text, playerName .. " hatched a ") then
-                HatchText = username .. " just hatched a "
+Chat.ChildAdded:Connect(function(instance)
+    if string.find(instance.TextLabel.Text,"Server") then
+        if string.find(instance.TextLabel.Text,local username) then
+                if string.find(instance.TextLabel.Text,"hatched") then
+                    if string.find(instance.TextLabel.Text,"a") then
 
                 if string.find(instance.TextLabel.Text,"Galactic Star") then
                     if string.find(instance.TextLabel.Text,"Golden") then
